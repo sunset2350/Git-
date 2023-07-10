@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function checkAge(age) {
+      //   age > 18 ? true : confirm("보호자의 동의를 받으셨나요?");
+      // }
+
+      // checkAge(12);
+      // checkAge(19);
+
+      // function min(a, b) {
+      //   a > b ? alert(b) : alert(a);
+      // }
+      // min(2, 5);
+      // min(3, -1);
+      // min(1, 1);
+      function pow(x, n) {
+        let sum = 1;
+        if (n < 1) {
+          alert("자연수를 입력");
+        }
+        for (let i = 1; i <= n; i++) {
+          sum *= x;
+        }
+        alert(sum);
+      }
+
+      pow(3, 2);
+      pow(3, 3);
+      pow(1, 100);
+    </script>
+  </body>
+</html>
