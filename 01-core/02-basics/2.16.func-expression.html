@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 콜백 (callback)
+      // 나중에 호출하기 위해서 함수의 매개변수로 넘기는 함수
+      let sayHi = function () {
+        alert("Hello");
+      };
+
+      console.log(sayHi);
+
+      let func = sayHi;
+      console.log(sayHi);
+
+      function ask(question, yes, no) {
+        let result = confirm(question);
+        if (typeof yes === "function") {
+          yes();
+        } else if (typeof yes === "string") {
+          alert(yes);
+        }
+      }
+
+      function showOk() {
+        alert("동의하셨습니다.");
+      }
+
+      function showCancel() {
+        alert("취소 버튼을 누르셨습니다.");
+      }
+      // 익명함수(anonymous function), 인라인 함수
+      ask(
+        "동의하십니까?",
+        function () {
+          alert("동의하셨습니다.");
+        },
+        function () {
+          alert("취소 버튼을 누르셨습니다.");
+        }
+      );
+      // 사용법: 함수 showOk와 showCancel가 ask 함수의 인수로 전달됨
+      // 전역(global) : 어디서든지 접근
+      ask("동의하십니까?", showOk, showCancel);
+    </script>
+  </body>
+</html>

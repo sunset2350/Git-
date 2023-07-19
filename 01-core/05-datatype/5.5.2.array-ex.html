@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["banana", "apple", "orange", "pineapple", "kiwi"];
+      console.log(fruits.find((item) => item == "apple"));
+
+      const numbers = [1, 4, 5, 7, 2, 9, 3];
+      console.log(numbers.filter((item) => item > 5));
+
+      const nums = [1, 2, 3, 4, 5];
+      let number = [];
+      for (let i of nums) {
+        number.push(i * 10);
+      }
+      console.log(number);
+
+      const persons = [
+        {
+          name: "Kim",
+          skills: ["JavaScript", "HTML", "CSS"],
+        },
+        {
+          name: "Lee",
+          skills: ["Java", "Python", "SQL"],
+        },
+        {
+          name: "Park",
+          skills: ["Java", "JavaScript", "CSS"],
+        },
+      ];
+
+      let person = persons.find((item) => {
+        // console.log(item.skills);
+        // console.log(item.name === "Kim");
+      });
+      // console.log(person?.name);
+
+      const people = [
+        { name: "John", age: 28 },
+        { name: "Jane", age: 24 },
+        { name: "Mike", age: 30 },
+      ];
+      let peoples = people.filter((item) => {
+        return item.age > 25;
+      });
+
+      console.log(peoples.name);
+    </script>
+  </body>
+</html>

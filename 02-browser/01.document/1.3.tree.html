@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>시작</div>
+    <ul>
+      <li>항목</li>
+    </ul>
+    <div>끝</div>
+
+    <script>
+      const ul = document.querySelector("ul");
+      console.log(ul.childNodes); // text노드 포함
+      console.log(ul.children); // html element만
+
+      const li = ul.children[0];
+      console.log(li.childNodes);
+
+      console.log(li.parentElement);
+      console.log(li);
+    </script>
+  </body>
+</html>

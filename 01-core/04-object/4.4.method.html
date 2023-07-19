@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = {
+        name: "John",
+        age: 30,
+
+        // 속성으로써의 함수
+        // sayHi: function () {
+        //   alert("안녕하세요!");
+        //   console.log(this.name);
+        // },
+        sayHi() {
+          alert("안녕하세요!" + this.name);
+        },
+      };
+      // 속성추가(속성이 함수)
+      // user.sayHi = function () {
+      //   alert("안녕하세요");
+      // };
+
+      user.sayHi();
+    </script>
+  </body>
+</html>

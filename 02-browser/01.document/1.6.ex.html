@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .test[a href="http://google.com]{
+    color:orange;
+    }
+  </style>
+  <body>
+    <a name="list">the list</a>
+    <ul>
+      <li class="test"><a href="http://google.com">http://google.com</a></li>
+      <li class="test"><a href="/tutorial">/tutorial.html</a></li>
+      <li class="test"><a href="local/path">local/path</a></li>
+      <li class="test">
+        <a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a>
+      </li>
+      <li class="test"><a href="http://nodejs.org">http://nodejs.org</a></li>
+      <li class="test">
+        <a href="http://internal.com/test">http://internal.com/test</a>
+      </li>
+    </ul>
+
+    <script>
+      // setting style for a single link
+      let link = document.querySelector("li");
+      link.style.color = "orange";
+    </script>
+  </body>
+</html>

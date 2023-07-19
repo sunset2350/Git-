@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let users = [
+        { id: 1, name: "John" },
+        { id: 2, name: "Pete" },
+        { id: 3, name: "Mary" },
+      ];
+
+      let name = "Pete";
+      // 배열.find(요소마다 실행할 함수)
+      // -> 실행할 함수는 boolean값을 반환해야 함
+      // 배열.find(요소변수 => boolean을 반환하는 식)
+      // 배열.find(요소변수 => {... return true / false})
+      let user = users.find((item) => {
+        console.log(item);
+        // true인 케이스가 나오면 반복을 멈춤
+        // 해당 요소를 반환함. 객체 참조
+        // return item.name === name;
+        // return item.name === name;
+        return false;
+      });
+
+      // find에서 반환한 객체는 undefined일 수 있다.
+      // optional을 사용
+      // 찾은 객체가 있다 -> name 속성 출력
+      // 찾은 객체가 없다 -> undefined
+
+      console.log("finded user : ", user?.name);
+      // filter
+      const someUsers = users.filter;
+
+      // Map
+      const userNames = users.map((item) => item.name);
+    </script>
+  </body>
+</html>

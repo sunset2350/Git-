@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function removeColors(colors) {
+        colors.splice(2, 2);
+        console.log(colors);
+      }
+      removeColors(["Red", "Blue", "Green", "Yellow", "Black"]);
+
+      function firstThree(arr) {
+        arr.splice(3);
+        console.log(arr);
+      }
+      firstThree([0, 1, 2, 3, 4, 5]);
+
+      function mergeFruits(fruits1, fruits2) {
+        return fruits1.concat(fruits2);
+      }
+
+      console.log(
+        mergeFruits(
+          ["apple", "banana", "cherry"],
+          ["date", "elderberry", "fig"]
+        )
+      );
+
+      function squareNumbers(numbers) {
+        let doublenum = [];
+        numbers.forEach((num) => {
+          doublenum.push(num * num);
+        });
+        return doublenum;
+      }
+
+      console.log(squareNumbers([1, 2, 3, 4, 5]));
+
+      function swapFirstAndLast(arr) {
+        arr.splice(0, 0, arr[arr.length - 1]);
+        arr.splice(arr.length - 1, 1);
+        arr.splice(arr.length, 0, arr[1]);
+        arr.splice(1, 1);
+        return arr;
+      }
+
+      console.log(swapFirstAndLast([2, 1, 3, 4, 5, 12, 13, 15]));
+    </script>
+  </body>
+</html>
